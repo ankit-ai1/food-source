@@ -71,16 +71,14 @@ export default function ProductsPage() {
     <div className="pt-[70px]">
 
       {/* ── SECTION 1: HERO BANNER ─────────────────────────────────── */}
-      <section className="relative overflow-hidden w-full h-[55vw] min-h-[260px] md:h-[calc(100vh-70px)]">
+      <section className="relative overflow-hidden w-full bg-[#f5f5f0]" style={{ height: "56.25vw", maxHeight: "calc(100vh - 70px)", minHeight: "220px" }}>
         <img
           src={heroBannerImages[activeCategory]}
           alt={activeCatLabel}
-          className="w-full h-full"
+          className="w-full h-full object-contain md:object-cover"
           style={{
-            objectFit: "contain",
             objectPosition: "center center",
             display: "block",
-            background: "#f5f5f0",
             transition: "opacity 0.5s ease",
           }}
         />
