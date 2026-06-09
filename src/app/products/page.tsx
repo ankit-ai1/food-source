@@ -71,23 +71,16 @@ export default function ProductsPage() {
     <div className="pt-[70px]">
 
       {/* ── SECTION 1: HERO BANNER ─────────────────────────────────── */}
-      <section style={{
-        width: "100vw",
-        marginLeft: "calc(-50vw + 50%)",
-        height: "calc(100vh - 70px)",
-        minHeight: "500px",
-        position: "relative",
-        overflow: "hidden",
-      }}>
+      <section className="relative overflow-hidden w-full h-[55vw] min-h-[260px] md:h-[calc(100vh-70px)]">
         <img
           src={heroBannerImages[activeCategory]}
           alt={activeCatLabel}
+          className="w-full h-full"
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
+            objectFit: "contain",
+            objectPosition: "center center",
             display: "block",
+            background: "#f5f5f0",
             transition: "opacity 0.5s ease",
           }}
         />
@@ -123,9 +116,9 @@ export default function ProductsPage() {
 
       {/* ── SECTION 2: CATEGORY TABS ───────────────────────────────── */}
       <section style={{ background: "white", borderBottom: "1px solid #EEEEEE", padding: "20px 0" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center px-4 md:px-10" style={{ maxWidth: "1280px", margin: "0 auto" }}>
           {/* Tabs */}
-          <div className="flex gap-8 overflow-x-auto pb-1">
+          <div className="flex gap-6 overflow-x-auto pb-1">
             {categoryTabs.map((cat) => (
               <button
                 key={cat.id}
@@ -135,7 +128,7 @@ export default function ProductsPage() {
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover", border: activeCategory === cat.id ? "2px solid #E63B2E" : "2px solid #E0E0E0" }}
+                  style={{ width: "48px", height: "48px", borderRadius: "50%", objectFit: "cover", border: activeCategory === cat.id ? "2px solid #E63B2E" : "2px solid #E0E0E0" }}
                 />
                 <span style={{ fontSize: "13px", fontWeight: activeCategory === cat.id ? 700 : 500, color: activeCategory === cat.id ? "#E63B2E" : "#666", textDecoration: activeCategory === cat.id ? "underline" : "none" }}>
                   {cat.name}
@@ -147,6 +140,7 @@ export default function ProductsPage() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
+            className="self-start md:self-auto"
             style={{ border: "1px solid #DDD", borderRadius: "6px", padding: "8px 12px", fontSize: "13px", color: "#333", cursor: "pointer", background: "white", flexShrink: 0 }}
           >
             <option>↑↓ Sort By: Relevance</option>
@@ -159,8 +153,8 @@ export default function ProductsPage() {
 
       {/* ── SECTION 3: SEARCH BAR ──────────────────────────────────── */}
       <section style={{ background: "#F8F8F8", padding: "16px 0" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 40px", position: "relative" }}>
-          <Search size={16} style={{ position: "absolute", left: "56px", top: "50%", transform: "translateY(-50%)", color: "#999", pointerEvents: "none" }} />
+        <div className="px-4 md:px-10" style={{ maxWidth: "1200px", margin: "0 auto", position: "relative" }}>
+          <Search size={16} style={{ position: "absolute", left: "calc(1rem + 16px)", top: "50%", transform: "translateY(-50%)", color: "#999", pointerEvents: "none" }} />
           <input
             type="text"
             placeholder="Search products..."
@@ -175,7 +169,7 @@ export default function ProductsPage() {
       <section style={{ background: "#FAFAFA", minHeight: "500px" }}>
         <div
           className="flex flex-col md:flex-row"
-          style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 40px", gap: "24px" }}
+          className="px-4 md:px-10" style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 0", gap: "24px" }}
         >
           {/* SIDEBAR — desktop: fixed width | mobile: horizontal scroll */}
           <aside
@@ -293,7 +287,7 @@ export default function ProductsPage() {
           alt=""
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.2 }}
         />
-        <div style={{ position: "relative", maxWidth: "1280px", margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "62% 38%", alignItems: "center", gap: "32px" }}>
+        <div className="grid grid-cols-1 md:grid-cols-[62%_38%] gap-8 px-4 md:px-10" style={{ position: "relative", maxWidth: "1280px", margin: "0 auto", alignItems: "center" }}>
           <div>
             <p style={{ fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", color: "#B7D9C8" }}>Partner With Us</p>
             <h2 style={{ marginTop: "16px", fontSize: "36px", fontWeight: 700, color: "white", lineHeight: 1.2, maxWidth: "520px" }}>

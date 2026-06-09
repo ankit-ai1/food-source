@@ -39,8 +39,8 @@ export default function CareersPage() {
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "0 80px" }}>
-          <h1 style={{ fontSize: "38px", fontWeight: 800, color: "white", marginBottom: "10px" }}>
+        <div className="relative z-10 px-5 md:px-16">
+          <h1 style={{ fontSize: "clamp(26px, 5vw, 38px)", fontWeight: 800, color: "white", marginBottom: "10px" }}>
             Join Our Team
           </h1>
           <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)", maxWidth: "500px" }}>
@@ -50,8 +50,8 @@ export default function CareersPage() {
       </section>
 
       {/* ── SECTION 2: WHY JOIN US ── */}
-      <section style={{ background: "white", padding: "80px 0" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 40px" }}>
+      <section style={{ background: "white", padding: "60px 0" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-4 md:px-10">
 
           {/* Eyebrow */}
           <p style={{
@@ -73,11 +73,7 @@ export default function CareersPage() {
           </h2>
 
           {/* 4 benefit cards */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "20px",
-          }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {benefits.map((b) => (
               <div key={b.title} style={{
                 border: "1px solid #EEEEEE",
@@ -107,8 +103,8 @@ export default function CareersPage() {
       </section>
 
       {/* ── SECTION 3: OPEN POSITIONS ── */}
-      <section style={{ background: "#F8F8F8", padding: "80px 0" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 40px" }}>
+      <section style={{ background: "#F8F8F8", padding: "60px 0" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-4 md:px-10">
 
           {/* Eyebrow */}
           <p style={{
@@ -139,10 +135,12 @@ export default function CareersPage() {
                 background: "white",
                 border: "1px solid #EEEEEE",
                 borderRadius: "12px",
-                padding: "20px 28px",
+                padding: "20px 24px",
                 display: "flex",
-                alignItems: "center",
+                alignItems: "flex-start",
                 justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "16px",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
               }}>
                 {/* Left */}
@@ -205,7 +203,7 @@ export default function CareersPage() {
           }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.65)" }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "0 80px", maxWidth: "700px" }}>
+        <div className="relative z-10 px-5 md:px-16" style={{ maxWidth: "700px" }}>
           <p style={{
             fontSize: "12px", fontWeight: 600, color: "rgba(255,255,255,0.6)",
             textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "16px",

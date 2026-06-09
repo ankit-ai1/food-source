@@ -67,8 +67,8 @@ export default function BrandsPage() {
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.6)" }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "0 80px" }}>
-          <h1 style={{ fontSize: "36px", fontWeight: 800, color: "white", marginBottom: "8px" }}>
+        <div className="relative z-10 px-5 md:px-16">
+          <h1 style={{ fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 800, color: "white", marginBottom: "8px" }}>
             Our Brands
           </h1>
           <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)", maxWidth: "500px" }}>
@@ -79,12 +79,8 @@ export default function BrandsPage() {
 
       {/* ── BRAND GRID ── */}
       <section style={{ background: "#F8F8F8", padding: "60px 0" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 40px" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "24px",
-          }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-4 md:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {brandsList.map((brand) => (
               <article
                 key={brand.id}

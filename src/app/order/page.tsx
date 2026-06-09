@@ -28,8 +28,8 @@ export default function OrderPage() {
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(26,60,46,0.75)" }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "0 80px" }}>
-          <h1 style={{ fontSize: "36px", fontWeight: 800, color: "white", marginBottom: "8px" }}>
+        <div className="relative z-10 px-5 md:px-16">
+          <h1 style={{ fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 800, color: "white", marginBottom: "8px" }}>
             Order Our Products
           </h1>
           <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)" }}>
@@ -40,9 +40,9 @@ export default function OrderPage() {
 
       {/* ── FORM ── */}
       <div style={{ maxWidth: "700px", margin: "48px auto", padding: "0 20px 80px" }}>
-        <div style={{
+        <div className="px-5 md:px-12" style={{
           background: "white", borderRadius: "16px",
-          padding: "40px 48px",
+          padding: "40px 0",
           boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
         }}>
 
@@ -89,7 +89,7 @@ export default function OrderPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
 
               {/* Row 1: Name + Email */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label style={labelStyle}>Name *</label>
                   <input placeholder="" style={inputStyle} />
@@ -101,7 +101,7 @@ export default function OrderPage() {
               </div>
 
               {/* Row 2: Company + Phone */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label style={labelStyle}>Company *</label>
                   <input placeholder="" style={inputStyle} />
@@ -113,7 +113,7 @@ export default function OrderPage() {
               </div>
 
               {/* Row 3: City + Business Type */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label style={labelStyle}>City</label>
                   <select style={selectStyle}>

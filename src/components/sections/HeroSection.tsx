@@ -104,12 +104,14 @@ export function HeroSection() {
 
       {/* ── TEXT — left aligned ── */}
       <div
+        className="px-5 md:px-10 lg:pl-20"
         style={{
           position: "relative",
           zIndex: 10,
           width: "100%",
           maxWidth: "580px",
-          padding: "80px 40px 110px 80px",
+          paddingTop: "80px",
+          paddingBottom: "110px",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",

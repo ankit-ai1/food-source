@@ -76,17 +76,17 @@ const products = [
   {
     name: "Olives",
     description: "Artisanal green and Kalamata varieties.",
-    image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=900&q=80",
+    image: "https://res.cloudinary.com/dtg3lepr4/image/upload/v1781028875/ChatGPT_Image_Jun_9_2026_11_44_20_PM_iyjp7j.png",
   },
   {
     name: "Cheeses",
     description: "Feta, halloumi, and premium dairy staples.",
-    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=900&q=80",
+    image: "https://res.cloudinary.com/dtg3lepr4/image/upload/v1781029047/ChatGPT_Image_Jun_9_2026_11_47_13_PM_g62nzk.png",
   },
   {
     name: "Pickles",
     description: "Mediterranean fermented vegetables and mezze.",
-    image: "https://images.unsplash.com/photo-1601924582975-41e8b6d5a6a5?w=900&q=80",
+    image: "https://res.cloudinary.com/dtg3lepr4/image/upload/v1781029241/ChatGPT_Image_Jun_9_2026_11_50_27_PM_rqybsi.png",
   },
 ];
 
