@@ -166,8 +166,8 @@ export default function ProductsPage() {
       {/* ── SECTION 4: MAIN CONTENT ────────────────────────────────── */}
       <section style={{ background: "#FAFAFA", minHeight: "500px" }}>
         <div
-          className="flex flex-col md:flex-row"
-          className="px-4 md:px-10" style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 0", gap: "24px" }}
+          className="flex flex-col md:flex-row px-4 md:px-10"
+          style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 0", gap: "24px" }}
         >
           {/* SIDEBAR — desktop: fixed width | mobile: horizontal scroll */}
           <aside
